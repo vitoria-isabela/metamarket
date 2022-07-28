@@ -3,6 +3,7 @@
 /// <summary>
 /// Responsável pelo lançamento de exceções da classe <see cref="SalePurchase"/> 
 /// </summary>
-public class SalePurchaseExceptionValidation
+public class SalePurchaseExceptionValidation : Exception
 {
+
 }

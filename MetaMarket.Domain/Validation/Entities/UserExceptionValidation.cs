@@ -3,6 +3,7 @@
 /// <summary>
 /// Responsável pelo lançamento de exceções da classe <see cref="User"/> 
 /// </summary>
-public class UserExceptionValidation
+public class UserExceptionValidation : Exception
 {
+
 }
