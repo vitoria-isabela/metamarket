@@ -14,4 +14,14 @@ public class Sale
     /// Emails que receberão a promoção
     /// </summary>
     public ICollection<string> Emails { get; set; }
+
+    /// <summary>
+    /// Representa Foreign Key do funcionario
+    /// </summary>
+    public int SalespersonId { get; set; }
+
+    /// <summary>
+    /// Representa o vendedor que realiza o envio da promoção
+    /// </summary>
+    public Salesperson Salesperson { get; set; }
 }

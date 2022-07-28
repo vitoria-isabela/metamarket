@@ -3,18 +3,8 @@
 /// <summary>
 /// Entidade que representa a categoria de um produto do MetaMarket
 /// </summary>
-public class ProductCategory
+public class ProductCategory : BaseEntity
 {
-    /// <summary>
-    /// Codigo que representa uma categoria de produto
-    /// </summary>
-    public int Id { get; set; }
-
-    /// <summary>
-    /// Nome da categoria em que um produto se enquadra
-    /// </summary>
-    public string Name { get; set; }
-
     // <summary>
     /// Preço de um produto
     /// </summary>
@@ -23,7 +13,7 @@ public class ProductCategory
     /// <summary>
     /// Uma lista de produtos
     /// </summary>
-    public ICollection<Product>? Products { get; set; }
+    public ICollection<Product> Products { get; set; }
 
     /// <summary>
     /// Construtor da categoria que recebe o nome de uma categoria

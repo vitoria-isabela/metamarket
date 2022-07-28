@@ -24,4 +24,23 @@ public class SalePurchase
     /// CNPJ do supermercado MetaMarket
     /// </summary>
     public string Cnpj { get; set; }
+
+    /// <summary>
+    /// Representa a Foreign Key do Cliente
+    /// </summary>
+    public int ClientId { get; set; }
+    /// <summary>
+    /// Representa o cliente que realiza a compra
+    /// </summary>
+    public Client Client { get; set; }
+
+    /// <summary>
+    /// Representa a Foreign Key do vendedor
+    /// </summary>
+    public int SalePersonId { get; set; }
+
+    /// <summary>
+    /// Representa o vendedor da venda realizada
+    /// </summary>
+    public Salesperson Salesperson { get; set; }
 }
