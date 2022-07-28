@@ -5,11 +5,6 @@
 /// </summary>
 public class ProductCategory : BaseEntity
 {
-    // <summary>
-    /// Preço de um produto
-    /// </summary>
-    public float Price { get; set; }
-
     /// <summary>
     /// Uma lista de produtos
     /// </summary>
