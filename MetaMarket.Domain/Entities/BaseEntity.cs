@@ -1,5 +1,8 @@
 ﻿namespace MetaMarket.Domain.Entities;
 
+/// <summary>
+/// 
+/// </summary>
 public class BaseEntity
 {
     /// <summary>
