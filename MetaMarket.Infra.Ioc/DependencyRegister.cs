@@ -1,4 +1,7 @@
-﻿using MetaMarket.Domain.Interfaces;
+﻿using MetaMarket.Application.AutoMapper;
+using MetaMarket.Application.Interfaces;
+using MetaMarket.Application.Services;
+using MetaMarket.Domain.Interfaces;
 using MetaMarket.Infra.Data.Context;
 using MetaMarket.Infra.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -25,8 +28,14 @@ public static class DependencyRegister
         options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"
         ), b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
+        //Repositorios 
         services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
         //services.AddScoped<IProductRepository, ProductRepository>();
+
+        //Serviços
+        services.AddScoped<IProductCategoryService, ProductCategoryService>();
+
+        services.AddAutoMapper(typeof(DomainToDtoMappingProfile));
 
         return services;
     }
